@@ -2,7 +2,7 @@
 //lembrando que precisa ter a palavra MODULE
 import axios from "axios";
 import { useEffect, useState } from "react";
-import css from "./index.module.css";
+import Login from "../login/login";
 
 interface User {
   email: string;
@@ -15,7 +15,7 @@ function App() {
     //faz a REQUEST usando o axios
     //VERBO HTTP e URL do ENDPOINT
     axios
-    //tipagem da REQUEST
+      //tipagem da REQUEST
       .get<User[]>(
         "http://localhost:8000/users"
         //Vai receber uma CALLBACK que vai trazer os dados da REQUEST
@@ -25,10 +25,8 @@ function App() {
   }, []);
   //e para passaar as classes devemos acessar como se fosse um ATRIBUTO de OBJETO
   return (
-    <div className={css.main}>
-      {users.map((user: User, index: number) => (
-        <h1 key={index}>userEmail: {user.email}</h1>
-      ))}
+    <div>
+      <Login />
     </div>
   );
 }

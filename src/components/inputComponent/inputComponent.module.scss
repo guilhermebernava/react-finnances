@@ -1,0 +1,28 @@
+*{
+    position: relative;
+}
+
+.text {
+  width: 350px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border-radius: 10px;
+  color: #fff;
+  background-color: rgb(25, 25, 25);
+  border: 2px solid #FA8C1D;
+  box-sizing: border-box;
+  margin: 0px 0px 20px 0px;
+}
+
+.name{
+    color: #1B8FB1;
+    font-size: 16px;
+    padding: 0 0 10px 0;
+  align-items: flex-start;
+
+}
+
+input:focus{
+    outline: none;      /* Remove default outline and use border or box-shadow */
+    border: 2px solid #1da5fa; /* Full freedom. (works also with border-radius) */
+  }
